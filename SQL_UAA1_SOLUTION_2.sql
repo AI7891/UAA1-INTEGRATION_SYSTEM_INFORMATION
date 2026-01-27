@@ -17,3 +17,12 @@ SELECT *
 		COMMENT NVARCHAR(250) '$.Comment',
 		CREATION_DATE DATETIME '$.CreationDate'
 	)	
+
+GO
+CREATE VIEW V_PRODUCT_AND_CATEGORY
+AS
+SELECT *
+FROM
+[dbo].[Product] P 
+JOIN
+[dbo].[Review] R ON R.Id = P.Id 
